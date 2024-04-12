@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body background="/Imagenes/purpura.png">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="/Imagenes/Logo.jpeg" alt="" width="64" height="64" >
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 h2" >
+                  <li class="nav-item px-3" >
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Menu</a
+                    >
+                  </li>
+                  <li class="nav-item px-3">
+                    <a class="nav-link" href="/pagina/principal.html">Inicio</a>
+                  </li>
+                  <li class="nav-item px-3">
+                    <a class="nav-link" href="/pagina/catalogo.html">Catalogo</a>
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="/pagina/catalogo.html"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Comedores
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/Mesas/Mesas.html">Mesas</a></li>
+                      <li><a class="dropdown-item" href="/Sillas/Sillas.html">Sillas</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!--fin-->
+    </header>
+    <main>
+        <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+          }
+          .content {
+            text-align: center;
+          }
+        </style>
+        <div class="content">
+            <h1><span style="color:rgb(60, 0, 223);">Antes de finalizar, rellene sus datos.</span></h1>
+            <form action="gracias.html" method="post">
+                <label for="nombre">Nombre del Cliente:</label><br>
+                <input type="text" id="nombre" name="nombre"><br><br>
+                
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion"><br><br>
+                
+                <label for="numero-tarjeta">Número de Tarjeta:</label><br>
+                <input type="text" id="numero-tarjeta" name="numero-tarjeta" maxlength="16"><br><br>
+                
+                <label for="cvv">CVV:</label><br>
+                <input type="text" id="cvv" name="cvv" maxlength="3"><br><br>
+                
+                <button type="submit">Comprar</button>
+            </form>
+        </div>
+    </main>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

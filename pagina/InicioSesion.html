@@ -69,6 +69,7 @@
     <main>
       <div class="card mb-4">
         <div class="card-body">
+            <form id="formu2">
           <label for="nombre">Nombre del Cliente:</label><br>
           <input type="text" id="nombre" name="nombre"><br><br>
 
@@ -77,8 +78,30 @@
 
           <button type="submit"> Iniciar </button>
           <h> ¿No tienes cuenta? <a href="/pagina/registro.html"> Registrate </a></h>
+        </form>
 
   </main>
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById('formu2').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          var nombre = document.getElementById("nombre").value;
+          var contraseña = document.getElementById("contraseña").value;
+
+          if (nombre === "") {
+              alert("ingresar un Nombre");
+              return;
+          }
+
+          if (contraseña === "") {
+              alert("Falta Contraseña");
+              return;
+          }
+
+          alert("Inicio Exitoso");
+          event.target.submit();
+      });
+  </script>
 </body>
 </html>
